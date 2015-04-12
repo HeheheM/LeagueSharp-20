@@ -66,6 +66,9 @@ namespace UltimateCarry.Champions
                 .AddItem(
                     new MenuItem("useE_Passive", "Auto E").SetValue(
                         (new KeyBind("H".ToCharArray()[0], KeyBindType.Toggle, true))));
+                        
+            Program.Menu.AddSubMenu(new Menu("Misc", "Misc"));
+            Program.Menu.SubMenu("Misc").AddItem(new MenuItem("Zed_hitChance", "Hitchance").SetValue(new StringList(new[] { "Low", "Medium", "High", "Very High" }, 3)));
 
             Program.Menu.AddSubMenu(new Menu("Drawing", "Drawing"));
             Program.Menu.SubMenu("Drawing").AddItem(new MenuItem("Draw_Disabled", "Disable All").SetValue(false));
@@ -183,7 +186,7 @@ namespace UltimateCarry.Champions
 
         private static HitChance GetHitchance()
         {
-            switch (ElXerathMenu._menu.Item("ElXerath.hitChance").GetValue<StringList>().SelectedIndex)
+            switch (ElXerathMenu._menu.Item("Zed_hitChance").GetValue<StringList>().SelectedIndex)
             {
                 case 0:
                     return HitChance.Low;
