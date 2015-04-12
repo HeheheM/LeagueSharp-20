@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
@@ -245,7 +245,7 @@ namespace UltimateCarry.Champions
             var target = TargetSelector.GetTarget(Q.Range, TargetSelector.DamageType.Physical);
             if (target != null)
             {
-                if (target.IsValidTarget(Q.Range) && Q.GetPrediction(target).Hitchance >= HitChance.High)
+                if (target.IsValidTarget(Q.Range) && Q.GetPrediction(target).Hitchance >= HitChance.VeryHigh)
                 {
                     Q.Cast(target, Packets());
                     return;
