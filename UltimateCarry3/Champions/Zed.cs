@@ -186,7 +186,7 @@ namespace UltimateCarry.Champions
 
         private static HitChance GetHitchance()
         {
-            switch (ElXerathMenu._menu.Item("Zed_hitChance").GetValue<StringList>().SelectedIndex)
+            switch (Program.Menu.Item("Zed_hitChance").GetValue<StringList>().SelectedIndex)
             {
                 case 0:
                     return HitChance.Low;
