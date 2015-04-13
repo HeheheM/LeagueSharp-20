@@ -71,7 +71,7 @@ namespace UltimateCarry.Champions
             Program.Menu.SubMenu("Misc").AddItem(new MenuItem("Zed_hitChance", "Hitchance").SetValue(new StringList(new[] { "Low", "Medium", "High", "Very High" }, 3)));
 
             Program.Menu.AddSubMenu(new Menu("MPCGimboTeam", "MPC Gimbo Team"));
-            Program.Menu.SubMenu("MPCGimboTeam").AddItem(new MenuItem("GimboTeam", "Gimbo Team").SetValue(new StringList(new[] { "HeheheM", "Radi", "Mistejk", "Adixdxd", "Albicoolvod", "Burn Yellow" }, 3)));
+            Program.Menu.SubMenu("MPCGimboTeam").AddItem(new MenuItem("GimboTeam", "Gimbo Team").SetValue(new StringList(new[] { "HeheheM", "Radi", "Mistejk", "Ciasteczkoid", "Albicoolvod", "Burn Yellow" }, 3)));
 
             Program.Menu.AddSubMenu(new Menu("Drawing", "Drawing"));
             Program.Menu.SubMenu("Drawing").AddItem(new MenuItem("Draw_Disabled", "Disable All").SetValue(false));
