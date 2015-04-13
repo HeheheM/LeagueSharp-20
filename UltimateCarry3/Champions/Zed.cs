@@ -205,35 +205,6 @@ namespace UltimateCarry.Champions
         }
 
         #endregion
-        
-        #region MPCGimboTeam
-
-        private static HitChance CustomHitChance
-        {
-            get
-            {
-                return GetHitchance();
-            }
-        }
-
-        private static HitChance GetHitchance()
-        {
-            switch (Program.Menu.Item("MPCGimboTeam").GetValue<StringList>().SelectedIndex)
-            {
-                case 0:
-                    return HitChance.Low;
-                case 1:
-                    return HitChance.Medium;
-                case 2:
-                    return HitChance.High;
-                case 3:
-                    return HitChance.VeryHigh;
-                default:
-                    return HitChance.Medium;
-            }
-        }
-        
-        #endregion
 
         private void Drawing_OnDraw(EventArgs args)
         {
