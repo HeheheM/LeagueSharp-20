@@ -232,6 +232,8 @@ namespace UltimateCarry.Champions
                     return HitChance.Medium;
             }
         }
+        
+        #endregion
 
         private void Drawing_OnDraw(EventArgs args)
         {
