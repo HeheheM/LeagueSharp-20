@@ -70,6 +70,9 @@ namespace UltimateCarry.Champions
             Program.Menu.AddSubMenu(new Menu("Misc", "Misc"));
             Program.Menu.SubMenu("Misc").AddItem(new MenuItem("Zed_hitChance", "Hitchance").SetValue(new StringList(new[] { "Low", "Medium", "High", "Very High" }, 3)));
 
+            Program.Menu.AddSubMenu(new Menu("MPCGimboTeam", "MPC Gimbo Team"));
+            Program.Menu.SubMenu("MPCGimboTeam").AddItem(new MenuItem("GimboTeam", "Gimbo Team").SetValue(new StringList(new[] { "HeheheM", "Radi", "Mistejk", "Adixdxd", "Albicoolvod" }, 3)));
+
             Program.Menu.AddSubMenu(new Menu("Drawing", "Drawing"));
             Program.Menu.SubMenu("Drawing").AddItem(new MenuItem("Draw_Disabled", "Disable All").SetValue(false));
             Program.Menu.SubMenu("Drawing").AddItem(new MenuItem("Draw_Q", "Draw Q").SetValue(true));
@@ -202,6 +205,33 @@ namespace UltimateCarry.Champions
         }
 
         #endregion
+        
+        #region MPCGimboTeam
+
+        private static HitChance CustomHitChance
+        {
+            get
+            {
+                return GetHitchance();
+            }
+        }
+
+        private static HitChance GetHitchance()
+        {
+            switch (Program.Menu.Item("MPCGimboTeam").GetValue<StringList>().SelectedIndex)
+            {
+                case 0:
+                    return HitChance.Low;
+                case 1:
+                    return HitChance.Medium;
+                case 2:
+                    return HitChance.High;
+                case 3:
+                    return HitChance.VeryHigh;
+                default:
+                    return HitChance.Medium;
+            }
+        }
 
         private void Drawing_OnDraw(EventArgs args)
         {
